@@ -20,43 +20,48 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import User from 'App/Models/User'
+Route.group(() => {
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
 
-Route.post('login', async ({ auth, request, response }) => {
-  const body = request.body()
+  Route.get('/', async () => {
+    return { hello: 'world' }
+  })
 
-  const email = request.input('email')
-  const password = request.input('password')
+  Route.post('login', async ({ auth, request, response }) => {
+    const body = request.body()
 
-  try {
-    const usuario = await User.findBy('email', email)
+    const email = request.input('email')
+    const password = request.input('password')
 
-    const token = await auth.use('api').attempt(email, password, {
-      name: usuario?.serialize().email,
-    })
-    response.status(201)
-    return {
-      message: 'Usuario logado',
-      token,
-      usuario: usuario?.serialize(),
-    }
-  } catch(error) {
-    return response.unauthorized(
-      {
-        error: true,
-        message: 'Autenticação não pode ser efetuada, Verifique seus dados'
+    try {
+      const usuario = await User.findBy('email', email)
+
+      const token = await auth.use('api').attempt(email, password, {
+        name: usuario?.serialize().email,
+      })
+      response.status(201)
+      return {
+        message: 'Usuario logado',
+        token,
+        usuario: usuario?.serialize(),
       }
-    )
-  }
-})
- 
-Route.get('dashboard', async ({ auth }) => {
-  await auth.use('api').authenticate()
-  console.log(auth.use('api').user!) 
-    return `Ola ${ auth.user?.nome } Voce esta Autenticado` 
-})
+    } catch (error) {
+      return response.unauthorized(
+        {
+          error: true,
+          message: 'Autenticação não pode ser efetuada, Verifique seus dados'
+        }
+      )
+    }
+  })
 
-Route.resource('users', 'UsersController')
+  Route.get('dashboard', async ({ auth }) => {
+    await auth.use('api').authenticate()
+    console.log(auth.use('api').user!)
+    return `Ola ${auth.user?.nome} Voce esta Autenticado`
+  })
+
+  Route.resource('users', 'UsersController')
+  Route.resource('publicidades', 'PublicidadesController')
+
+}).prefix('/api')

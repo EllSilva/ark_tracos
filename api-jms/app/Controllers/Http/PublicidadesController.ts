@@ -10,16 +10,18 @@ export default class PublicidadesController {
 
     //mostrar todos AS  publicacao 
     public async index() {
-        const publicidade = await Publicidade.all()
+        const publicidade = await Publicidade.query().preload('comentarios')
         return {
             message: 'Lista da publicidade',
             data: publicidade,
         }
     }
 
-    //mostrar apenas um usuario e as publicacao 
+    //mostrar apenas uma publicacao e os seus Comentarios 
     public async show({ params }: HttpContextContract) {
         const publicidade = await Publicidade.findOrFail(params.id)
+
+        await publicidade.load('comentarios')
 
         return {
             message: 'Lista da publicidade pelo id',
@@ -81,7 +83,7 @@ export default class PublicidadesController {
 
             if (publicidade.imagem != body.imagem || !publicidade.imagem) {
                 const img = request.file('imagem', this.validationOptions)
- 
+
                 if (img) {
                     const imgName = `${uuidv4()}.${img!.extname}`
 

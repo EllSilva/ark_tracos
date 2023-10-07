@@ -61,7 +61,9 @@ Route.group(() => {
     return `Ola ${auth.user?.nome} Voce esta Autenticado`
   })
 
-  Route.resource('users', 'UsersController')
-  Route.resource('publicidades', 'PublicidadesController')
+  Route.resource('users', 'UsersController').apiOnly()
+  Route.resource('publicidades', 'PublicidadesController').apiOnly()
+
+  Route.post('/publicidades/:publicidadeId/comentarios', "ComentariosController.store" )
 
 }).prefix('/api')

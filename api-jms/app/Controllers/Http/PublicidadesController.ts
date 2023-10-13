@@ -43,7 +43,7 @@ export default class PublicidadesController {
             if (img) {
                 const imgName = `${uuidv4()}.${img!.extname}`
 
-                await img.move(Application.tmpPath('uploadsPublic'), {
+                await img.move(Application.tmpPath('uploads'), {
                     name: imgName,
                 })
 
@@ -87,7 +87,7 @@ export default class PublicidadesController {
                 if (img) {
                     const imgName = `${uuidv4()}.${img!.extname}`
 
-                    await img.move(Application.tmpPath('uploadsPublic'), {
+                    await img.move(Application.tmpPath('uploads'), {
                         name: imgName,
                     })
 

@@ -10,6 +10,8 @@ import page_footer from './components/footer/home.js'
 Vue.component('p-footer', page_footer)
 
 
+import page_login from './view/login/home.js'
+Vue.component('p-login', page_login)
  
 import page_blog from './view/blogs/blog.js'
 Vue.component('p-blog', page_blog)
@@ -17,10 +19,13 @@ Vue.component('p-blog', page_blog)
 import page_novo_blog from './view/blogs/cadastro.js'
 Vue.component('p-novo_blog', page_novo_blog)
 
-import page_login from './view/login/home.js'
-Vue.component('p-login', page_login)
 
+ 
+import page_galeria from './view/galeria/galerias.js'
+Vue.component('p-galeria', page_galeria)
 
+import page_novo_galeria from './view/galeria/cadastro.js'
+Vue.component('p-novo_galeria', page_novo_galeria)
 
 
 
@@ -62,7 +67,8 @@ const routes = [
     { path: '/blog', component: { template: '<p-blog></p-blog>' } },
     { path: '/novo_blog', component: { template: '<p-novo_blog></p-novo_blog>' } },
 
-
+    { path: '/galeria', component: { template: '<p-galeria></p-galeria>' } },
+    { path: '/novo_galeria', component: { template: '<p-novo_galeria></p-novo_galeria>' } },
 
     
     { path: '/novo-usuario', component: { template: '<p-usuario></p-usuario>' } },

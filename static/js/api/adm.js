@@ -14,7 +14,27 @@ export default {
         })
     },
 
-    /*! 
+    
+    async cadastra_blog(
+        titulo, descricao, imagem) {
+        return await http.post('/publicidades', {
+            titulo, descricao, imagem
+
+        })
+    },
+
+    async lista_blog() {
+        return await http.get('/publicidades')
+    }, 
+
+    async cadastra_projeto(
+        titulo, categoria, link) {
+        return await http.post('/projectoslinks', {
+            titulo, categoria, link
+        })
+    },
+    
+        /*! 
     async recuperar_password(email) {
         return await http.post('/recuperar-password', {
             email

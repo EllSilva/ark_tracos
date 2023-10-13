@@ -24,12 +24,15 @@ Vue.component('p-arquitetura', page_arquitetura)
 import page_topografico from './view/servicos/topografico.js'
 Vue.component('p-topografico', page_topografico) 
  
-
 import page_sobre from './view/sobre/home.js'
 Vue.component('p-sobre', page_sobre)
 
 import page_galeria from './view/galeria/home.js'
 Vue.component('p-galeria', page_galeria)
+
+import page_blogs from './view/blogs/home.js'
+Vue.component('p-blogs', page_blogs)
+
 
 import page_contato from './view/contato/home.js'
 Vue.component('p-contato', page_contato)
@@ -50,6 +53,7 @@ const routes = [
     { path: '/sobre', component: { template: '<p-sobre></p-sobre>' } },
     { path: '/portfolio', component: { template: '<p-galeria></p-galeria>' } },
 
+    { path: '/blog', component: { template: '<p-blogs></p-blogs>' } },
     { path: '/contato', component: { template: '<p-contato></p-contato>' } }
 ]
 

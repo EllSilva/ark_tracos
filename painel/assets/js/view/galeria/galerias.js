@@ -37,5 +37,5 @@ export default {
 
   },
   
-  template: await get_template('./assets/js/view/blogs/blog')
+  template: await get_template('./assets/js/view/galeria/blog')
 }

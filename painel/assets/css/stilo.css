@@ -1,3 +1,20 @@
+.image-container {  
+  width: 50%; 
+}
+.image-img {  
+  width: 30%;
+  height: 30%;
+}
+
+.img_blog {  
+  top: 0;
+  left: 0;
+  width: 2vw;
+  height: 4vh;
+}
+
+w-100 h-100
+ 
 .page-loader {
   display: flex;
   justify-content: center;

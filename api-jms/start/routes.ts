@@ -22,7 +22,6 @@ import Route from '@ioc:Adonis/Core/Route'
 import User from 'App/Models/User'
 Route.group(() => {
 
-
   Route.get('/', async () => {
     return { hello: 'world' }
   })
@@ -63,7 +62,8 @@ Route.group(() => {
 
   Route.resource('users', 'UsersController').apiOnly()
   Route.resource('publicidades', 'PublicidadesController').apiOnly()
-
-  Route.post('/publicidades/:publicidadeId/comentarios', "ComentariosController.store" )
-
+  Route.post('/publicidades/:publicidadeId/comentarios', "ComentariosController.store")
+  Route.resource('projectos', 'ProjectosController').apiOnly()
+  Route.resource('projectoslinks', 'ProjectoLinksController').apiOnly()
 }).prefix('/api')
+

@@ -27,6 +27,12 @@ export default {
         return await http.get('/publicidades')
     }, 
 
+    async listar_blog( titulo, descricao, imagem) {
+        return await http.get('/publicidades', {
+             titulo, descricao, imagem
+        })
+    },
+
     async cadastra_projeto(
         titulo, categoria, link) {
         return await http.post('/projectoslinks', {

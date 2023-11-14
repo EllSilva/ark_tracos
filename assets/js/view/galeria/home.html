@@ -8,13 +8,17 @@
           <p>Alguns dos nossos trabalhos </p>
           <h2>Visite Nossos Projetos</h2>
       </div>
+ 
+
+ 
+
       <div class="row">
           <div class="col-12"> 
               <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">Todos</li>
-                <li data-filter=".first">Concluído</li>
-                <li data-filter=".second">Em execução</li>
-                <li data-filter=".third">Próximos</li>
+                <li data-filter="*" @click="todas()" :class="{ filter_active: todos }" >Todos</li>
+                <li data-filter=".first" @click="web()" :class="{ filter_active: webX }">Concluído</li>
+                <li data-filter=".second" @click="app()" :class="{ filter_active: appX }">Em execução</li>
+                <li data-filter=".third" @click="psd()" :class="{ filter_active: psdX }">Nossos video</li>
             </ul>
           </div>
       </div>
@@ -25,7 +29,7 @@
                       <img src="assets/img/portfolio/1.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>
@@ -41,7 +45,7 @@
                       <img src="assets/img/portfolio/2.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>
@@ -57,7 +61,7 @@
                       <img src="assets/img/portfolio/3.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>
@@ -73,7 +77,7 @@
                       <img src="assets/img/portfolio/4.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>
@@ -89,7 +93,7 @@
                       <img src="assets/img/portfolio/5.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>
@@ -105,7 +109,7 @@
                       <img src="assets/img/portfolio/6.jpg" alt="Image">
                       <div class="portfolio-overlay">
                           <p>
-                              Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                              Descricao a desrever 
                           </p>
                       </div>
                   </div>

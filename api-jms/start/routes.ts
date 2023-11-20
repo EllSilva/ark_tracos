@@ -54,16 +54,29 @@ Route.group(() => {
     }
   })
 
+
+  /*
+|--------------------------------------------------------------------------
+  
   Route.get('dashboard', async ({ auth }) => {
     await auth.use('api').authenticate()
     console.log(auth.use('api').user!)
     return `Ola ${auth.user?.nome} Voce esta Autenticado`
   })
+ 
+*/
+ 
+ 
 
   Route.resource('users', 'UsersController').apiOnly()
   Route.resource('publicidades', 'PublicidadesController').apiOnly()
   Route.post('/publicidades/:publicidadeId/comentarios', "ComentariosController.store")
-  Route.resource('projectos', 'ProjectosController').apiOnly()
+  Route.resource('projectos', 'ProjectosController').apiOnly() 
+  
+  Route.resource('/projectos/:projectoId/img', 'ProjectosImgController').apiOnly()
+
+  Route.resource('/projectos/:projectoId/imgs', 'ImgsController').apiOnly()
+  
   Route.resource('projectoslinks', 'ProjectoLinksController').apiOnly()
 }).prefix('/api')
 

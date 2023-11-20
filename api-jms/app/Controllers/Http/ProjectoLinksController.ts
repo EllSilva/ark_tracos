@@ -1,5 +1,5 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Projecto from 'App/Models/Projecto'
+import Projecto from 'App/Models/Projecto2'
 
 export default class ProjectoLinksController {
 

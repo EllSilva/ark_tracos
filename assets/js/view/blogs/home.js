@@ -49,8 +49,7 @@ export default {
         this.imagem = dados2.imagem
         console.log("aquiiiiiii " + dados2.descricao)
 
-        let dados = (await this.listar()).data;
-
+     
         this.img = 'http://127.0.0.1:3333/uploads/'
 
         console.log(this.img)

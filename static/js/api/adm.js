@@ -39,6 +39,16 @@ export default {
             titulo, categoria, link
         })
     },
+     
+    async lista_projecto() {
+        return await http.get('/projectos')
+      //  return await http.get('/projectos')
+    }, 
+  
+
+    async lista_projecto_id(id) {
+        return await http.get('/projectos/'+id)
+    },
     
         /*! 
     async recuperar_password(email) {
@@ -47,6 +57,9 @@ export default {
         })
     },
 
+      async lista_portifolio() {
+        return await http.get('/portifolio')
+    }, 
 
     async alterar_password(password, token) {
         return await http.post('/alterar-password', {

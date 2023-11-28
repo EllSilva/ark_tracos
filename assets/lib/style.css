@@ -2,6 +2,25 @@
 /********* General CSS *********/
 /*******************************/
 
+.capaXLinicio {
+    /* Background pattern from Toptal Subtle Patterns */
+       height: 1000px;
+       width: 100%;
+       background-image: 
+           url("../img/ARK_TRAÇÕES.jpg") !important;
+           background-position: center, right, left;
+    }
+
+.capaXL {
+    /* Background pattern from Toptal Subtle Patterns */
+       height: 400px;
+       width: 100%;
+       background-image: 
+           url("../img/ARK_TRAÇÕES-capa.jpg") !important;
+       background-repeat: no-repeat, no-repeat;
+       background-position: right, left; 
+    }
+
 .row2>* {
     flex-shrink: 0;
     width: 100%;
@@ -10,6 +29,16 @@
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y);
 }
+
+.div_img_sl { 
+    width:  100%; 
+    height: 200px; 
+  }
+
+  .img_sl {  
+    height: 100%; 
+  }
+  
 
 .divdiv {
     /* Background pattern from Toptal Subtle Patterns */
@@ -305,7 +334,8 @@ background-position: right, left;
 
 /*******************************/
 /******** Carousel CSS *********/
-/*******************************/
+
+/***************
 .carousel {
     position: relative;
     width: 100%;
@@ -430,6 +460,8 @@ background-position: right, left;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
+
+****************/
 
 
 /*******************************/

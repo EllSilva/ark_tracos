@@ -6856,12 +6856,38 @@ fieldset:disabled .btn {
     padding: 1rem 1rem;
     color: #212529
 }
-  
 
- /*!
- *  aquiiiii
- */
-  
+.carousel {
+    position: relative
+}
+
+.carousel.pointer-event {
+    touch-action: pan-y
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.carousel-inner::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out
+}
+
 @media (prefers-reduced-motion:reduce) {
     .carousel-item {
         transition: none

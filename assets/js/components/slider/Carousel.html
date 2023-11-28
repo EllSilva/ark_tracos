@@ -1,0 +1,18 @@
+  <div class="carousel">
+        <div class="carousel-inner">
+            <c-carouselindicators v-if="indicators" :total="slides.length" :current-index="currentSlide"
+                @switch="switchSlide($event)">
+            </c-carouselindicators>
+
+            <c-carouselitem v-for="(slide, index) in slides" :slide="slide" :key="`item-${index}`"
+                :current-slide="currentSlide" :index="index" :dierection="dierection" @mouseenter="stopSlideTimer"
+                @mouseout="startSlideTimer">
+            </c-carouselitem>
+
+            <c-carouselcontrols v- if="controls" @prev="prev" @next="next">
+
+            </c-carouselcontrols>
+
+        </div>
+    </div>
+ 

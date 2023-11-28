@@ -1,129 +1,51 @@
 <div>
- 
 
-<!-- Portfolio Start -->
-<div class="portfolio">
-  <div class="container">
-      <div class="section-header text-center">
-          <p>Alguns dos nossos trabalhos </p>
-          <h2>Visite Nossos Projetos</h2>
-      </div>
- 
+    <!-- Portfolio Start -->
+    <div class="portfolio">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Alguns dos nossos trabalhos </p>
+                <h2>Visite Nossos Projetos</h2>
+            </div>
 
- 
+            <div class="row">
+                <div class="col-12">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" @click="todas()" :class="{ filter_active: todos }">Todos</li>
+                        <li data-filter=".first" @click="web()" :class="{ filter_active: webX }">Concluído</li>
+                        <li data-filter=".second" @click="app()" :class="{ filter_active: appX }">Em execução</li>
+                        <li data-filter=".third" @click="psd()" :class="{ filter_active: psdX }">Nossos video</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
 
-      <div class="row">
-          <div class="col-12"> 
-              <ul id="portfolio-flters">
-                <li data-filter="*" @click="todas()" :class="{ filter_active: todos }" >Todos</li>
-                <li data-filter=".first" @click="web()" :class="{ filter_active: webX }">Concluído</li>
-                <li data-filter=".second" @click="app()" :class="{ filter_active: appX }">Em execução</li>
-                <li data-filter=".third" @click="psd()" :class="{ filter_active: psdX }">Nossos video</li>
-            </ul>
-          </div>
-      </div>
-      <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/1.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/1.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/2.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/2.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/3.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/3.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/4.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/4.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/5.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/5.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.6s">
-              <div class="portfolio-warp">
-                  <div class="portfolio-img">
-                      <img src="assets/img/portfolio/6.jpg" alt="Image">
-                      <div class="portfolio-overlay">
-                          <p>
-                              Descricao a desrever 
-                          </p>
-                      </div>
-                  </div>
-                  <div class="portfolio-text">
-                      <h3>Project Name</h3>
-                      <a class="btn" href="assets/img/portfolio/6.jpg" data-lightbox="portfolio">+</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-  </div>
-</div>
-<!-- Portfolio End -->
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s"
+                    v-for="item in projectos" :key="item.id">
+                    <div class="portfolio-warp">
+                        <div class="portfolio-img">
+                            <div class="div_img_sl">
+                               <img  class="img_sl" :src="img+item.img1" alt="Image">  
+                            </div>
+                           
+                            <div class="portfolio-overlay">
+                                <p>
+                                    {{item.descricao}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="portfolio-text">
+                            <h3>{{item.titulo}}</h3>
+                            <a class="btn" @click="visualizar(item.id)">+</a>
+                        </div>
+                    </div>
+                </div>
  
- 
+            </div>
+
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
 </div>

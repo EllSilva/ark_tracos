@@ -19,7 +19,9 @@ export default {
    },
         
    async listar() {
-       let res = await api.lista_blog();
+       let res = await api.lista_projecto();
+       this.produtos = res,
+      alert(this.produtos)
        return res;
      },
   },
@@ -27,15 +29,9 @@ export default {
 
   async mounted() {
     // this.id_prod = 60;
-
-    let dados = (await this.listar()).data;
-
-    this.img = 'http://127.0.0.1:3333/uploads/'
-
-    console.log(this.img)
-    this.produtos = (await this.listar()).data;
-
+    this.listar()
+    
   },
   
-  template: await get_template('./assets/js/view/galeria/blog')
+  template: await get_template('./assets/js/view/galeria/galerias')
 }

@@ -15,6 +15,8 @@ export default class Projecto extends BaseModel {
   @column()
   public categoria: string
 
+  @column()
+  public estado: string
   
   @column()
   public img1: string
@@ -64,6 +66,17 @@ export default class Projecto extends BaseModel {
   @column()
   public img16: string
  
+  @column()
+  public img17: string
+
+  @column()
+  public img18: string
+
+  @column()
+  public img19: string
+
+  @column()
+  public img20: string
 
   @column()
   public descricao: string

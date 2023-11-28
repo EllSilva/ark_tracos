@@ -1,0 +1,133 @@
+/* efeito maquina de escrever
+.container{
+  background-color: #000;
+}
+*/
+
+
+.titulo-principal{
+  max-width: 480px;
+  text-align: center;
+  margin: 60px auto;
+  font-family:'Courier New', Courier, monospace;
+  color: #fff;
+}
+.titulo-principal:after{
+content: '|';
+margin-left: 5px;
+opacity: 1;
+animation: pisca .7s infinite;
+}
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca{
+  0%, 100%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
+  }
+}
+
+
+/*Fim do efeito maquina de escrever*/
+
+
+
+.img_slider { 
+ /*  width: 100%;*/
+  height: 100%;
+ 
+  display: block;
+  margin: 0px auto;
+}
+
+
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.slide-in-enter-active,
+.slide-in-leave-active,
+.slide-out-enter-active,
+.slide-out-leave-active {
+  transition: all 1s ease-in-out;
+}
+
+.slide-in-enter-from {
+  transform: translateX(-100%);
+}
+ 
+.slide-in-leve-to {
+  transform: translateX(100%);
+}
+
+.slide-out-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-out-leve-to {
+  transform: translateX(-100%);
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  top: calc(50% - 25px);
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.carousel-indicators {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 1.5em;
+  z-index: 2;
+   
+}
+
+.carousel-indicator-item {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background: red;
+  opacity: .5;
+  margin: 0.2em; 
+  border-radius: 50%;
+  cursor: pointer; 
+}
+
+.active { 
+  opacity: 1; 
+}

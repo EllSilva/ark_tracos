@@ -9,6 +9,7 @@ export default class extends BaseSchema {
 
       table.string('titulo')
       table.string('categoria')
+      table.string('estado')
       table.string('img1')
       table.string('img2')
       table.string('img3')
@@ -25,6 +26,10 @@ export default class extends BaseSchema {
       table.string('img14')
       table.string('img15')
       table.string('img16')
+      table.string('img17')
+      table.string('img18')
+      table.string('img19')
+      table.string('img20')
   
       table.string('descricao')
       

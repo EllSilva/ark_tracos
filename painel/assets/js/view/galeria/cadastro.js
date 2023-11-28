@@ -10,6 +10,7 @@ export default {
       file: "",
       titulo: null,
       categoria: null,
+      estado: null,
       link: null,
       imagemLink: null,
       descricao: null,
@@ -47,7 +48,10 @@ export default {
       nome14: null,
       nome15: null,
       nome16: null,
-     
+      nome17: null,
+      nome18: null,
+      nome19: null,
+      nome20: null,
     
       imagemVer: null,
       showFoto: true,
@@ -135,6 +139,7 @@ export default {
       let dataForm = new FormData();
       dataForm.append("titulo", this.titulo);
       dataForm.append("categoria", this.categoria);
+      dataForm.append("estado", this.estado);
       dataForm.append("img1", this.$refs.img1.files[0]);
       dataForm.append("img2", this.$refs.img2.files[0]);
       dataForm.append("img3", this.$refs.img3.files[0]);
@@ -151,7 +156,14 @@ export default {
       dataForm.append("img14", this.$refs.img14.files[0]);
       dataForm.append("img15", this.$refs.img15.files[0]);
       dataForm.append("img16", this.$refs.img16.files[0]);
+
+      dataForm.append("img17", this.$refs.img17.files[0]);
+      dataForm.append("img18", this.$refs.img18.files[0]);
+      dataForm.append("img19", this.$refs.img19.files[0]);
+      dataForm.append("img20", this.$refs.img20.files[0]);
       dataForm.append("descricao", this.descricao);
+
+console.log(dataForm)
 
       let res = await fetch(
         `http://127.0.0.1:3333/api/projectos`,

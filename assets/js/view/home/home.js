@@ -13,57 +13,48 @@ export default {
   },
 
   async mounted() {
+
+        
+    var swiper = new Swiper(".slide-principal", {
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 12500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    function typeWrite(elemento){
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = ' ';
+      textoArray.forEach(function(letra, i){   
+        
+      setTimeout(function(){
+          elemento.innerHTML += letra;
+      }, 75 * i)
+  
+    });
+  }
+  const titulo = document.querySelector('.titulo-principal');
+  typeWrite(titulo);
+
+
     
     AOS.init({
       duration: 1000,
     });
-   
-
-    var slider = new KeenSlider(
-      "#my-keen-slider",
-      {
-        loop: true,
-      },
-      [
-        (slider) => {
-          let timeout
-          let mouseOver = false
-          function clearNextTimeout() {
-            clearTimeout(timeout)
-          }
-          function nextTimeout() {
-            clearTimeout(timeout)
-            if (mouseOver) return
-            timeout = setTimeout(() => {
-              slider.next()
-            }, 5000)
-          }
-          slider.on("created", () => {
-            slider.container.addEventListener("mouseover", () => {
-              mouseOver = true
-              clearNextTimeout()
-            })
-            slider.container.addEventListener("mouseout", () => {
-              mouseOver = false
-              nextTimeout()
-            })
-            nextTimeout()
-          })
-          slider.on("dragStarted", clearNextTimeout)
-          slider.on("animationEnded", nextTimeout)
-          slider.on("updated", nextTimeout)
-        },
-      ]
-    )
-
-
-  
-
-    var slider = new KeenSlider("#my-keen-slider4", {
-      slides: {
-        perView: 5,
-      },
-    })
+    
+     
+ 
   
   },
   template: await get_template('./assets/js/view/home/home')

@@ -1,10 +1,36 @@
+.section-dig {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+
+    color: #10aaba;
+
+    margin: 0; 
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.slideDireita {  
+    font-size: 18px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    color: #f3f6ff;
+  }
+
+  .slideItem {    
+     color: #f3f6ff;
+          
+  }
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
 
 .capaXLinicio {
     /* Background pattern from Toptal Subtle Patterns */
-       height: 1000px;
+       height: 500px;
        width: 100%;
        background-image: 
            url("../img/ARK_TRAÇÕES.jpg") !important;
@@ -311,6 +337,8 @@ background-position: right, left;
         font-size: 15px;
         text-transform: uppercase;
     }
+
+     
 }
 
 @media (max-width: 991.98px) {
@@ -335,133 +363,7 @@ background-position: right, left;
 /*******************************/
 /******** Carousel CSS *********/
 
-/***************
-.carousel {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 170px);
-    min-height: 400px;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-}
 
-.carousel .carousel-inner,
-.carousel .carousel-item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carousel .carousel-item::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .3);
-    z-index: 1;
-}
-
-.carousel .carousel-caption {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: calc(100vh - 170px);
-    min-height: 400px;
-}
-
-.carousel .carousel-caption p {
-    color: #ffffff;
-    font-size: 30px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.carousel .carousel-caption h1 {
-    color: #ffffff;
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.carousel .carousel-caption .btn {
-    padding: 15px 35px;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 0;
-    transition: .3s;
-}
-
-.carousel .carousel-caption .btn:hover {
-    color: #414141;
-    background: linear-gradient(
-  90deg,
-  rgba(6, 110, 147, 1) 0%,
-  rgba(12, 150, 173, 1) 35%,
-  rgba(18, 184, 196, 1) 100%
-);
-    border-color: #10aaba;
-}
-
-@media (max-width: 767.98px) {
-    .carousel .carousel-caption h1 {
-        font-size: 40px;
-        font-weight: 700;
-    }
-
-    .carousel .carousel-caption p {
-        font-size: 20px;
-    }
-
-    .carousel .carousel-caption .btn {
-        padding: 12px 30px;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 0;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .carousel .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    .carousel .carousel-caption p {
-        font-size: 16px;
-    }
-
-    .carousel .carousel-caption .btn {
-        padding: 10px 25px;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0;
-    }
-}
-
-.carousel .animated {
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-}
-
-****************/
 
 
 /*******************************/
@@ -561,9 +463,18 @@ background-position: right, left;
     .page-header a {
         font-size: 20px;
     }
+
+    .slideDireita {  
+        font-size: 18px; 
+        margin-left: 15%; 
+      }
 }
 
 @media (max-width: 767.98px) {
+    .slideDireita {  
+        font-size: 18px; 
+        margin-left: 5%; 
+      }
     .page-header {
         padding: 45px 0;
     }
@@ -1815,7 +1726,8 @@ background-position: right, left;
 
 .sidebar .sidebar-widget {
     position: relative;
-    margin-bottom: 45px;
+    /*********margin-bottom: 45px;***********/
+    
 }
 
 .sidebar .sidebar-widget .widget-title {
@@ -2139,12 +2051,12 @@ background-position: right, left;
 .contact {
     position: relative;
     width: 100%;
-    padding: 45px 0;
+    padding: 0;
 }
 
 .contact .col-md-6 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .contact .col-md-6:first-child {

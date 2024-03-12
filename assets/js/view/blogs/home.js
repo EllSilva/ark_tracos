@@ -16,9 +16,10 @@ export default {
     },
 
     methods: {
+       
         async visualizar(id) {
-            globalThis._blog = this.produtos.find(aluguel => aluguel.id == id)
-            // window.location.href = "#/detalhe"
+            window.localStorage.setItem('id', this.projectos = id); 
+            window.location.href = "#/blog/detalhe"
         },
 
         async listar() {
@@ -46,15 +47,13 @@ export default {
         let dados2 = (await this.listar2()).data
         this.titulo = dados2.titulo
         this.descricao = dados2.descricao
-        this.imagem = dados2.imagem
-        console.log("aquiiiiiii " + dados2.descricao)
+        this.imagem = dados2.imagem 
+ 
+        this.img = 'https://api.ark-tracos.com/uploads/'
 
-     
-        this.img = 'http://127.0.0.1:3333/uploads/'
-
-        console.log(this.img)
+      
         this.produtos = (await this.listar()).data;
-        console.log(this.produtos)
+    
     },
 
     template: await get_template('./assets/js/view/blogs/home')

@@ -85,7 +85,7 @@ export default {
 
     async mounted() {
 
-        this.img = 'http://127.0.0.1:3333/uploads/'
+        this.img = 'https://api.ark-tracos.com/uploads/'
         this.id = window.localStorage.getItem('id');
         // listar()
 

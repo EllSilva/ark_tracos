@@ -43,25 +43,20 @@ export default {
       
 
       async sendFile() {
-
-        for (let i = 0; i < 3; i++) { 
-        
+  
           let dataForm = new FormData();
           dataForm.append("titulo", this.titulo);
           dataForm.append("descricao", this.descricao); 
           dataForm.append("imagem", this.$refs.img.files[0]);   
            
           let res = await fetch(
-            `http://127.0.0.1:3333/api/publicidades`,
+            `https://api.ark-tracos.com/api/publicidades`,
             {
               method: "POST",
               body: dataForm,
             }
-          );
-          
-           
- 
-      }
+          ); 
+     
       console.log("saiu do loopp");
 
        

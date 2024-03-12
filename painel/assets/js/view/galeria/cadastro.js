@@ -126,7 +126,7 @@ export default {
       let dataForm = new FormData();
       dataForm.append("img", this.selectedFile, this.selectedFile.name);
 
-      axios.post('http://127.0.0.1:3333/api/projectos/1/img', dataForm)
+      axios.post('https://api.ark-tracos.com/api/projectos/1/img', dataForm)
         .then(res => {
           console.log(res)
         });
@@ -166,7 +166,7 @@ export default {
 console.log(dataForm)
 
       let res = await fetch(
-        `http://127.0.0.1:3333/api/projectos`,
+        `https://api.ark-tracos.com/api/projectos`,
         {
           method: "POST",
           body: dataForm,

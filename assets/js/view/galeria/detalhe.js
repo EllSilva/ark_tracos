@@ -53,7 +53,7 @@ export default {
   methods: {
 
     async listar() {
-      const response = await fetch(`http://127.0.0.1:3333/api/projectos/` + this.id);
+      const response = await fetch(`https://api.ark-tracos.com/api/projectos/` + this.id);
       const movies = await response.json();
 
       return movies;
@@ -65,7 +65,7 @@ export default {
       let dataForm = new FormData();
 
       let res = await fetch(
-        `http://127.0.0.1:3333/api/projectos/` + this.id,
+        `https://api.ark-tracos.com/api/projectos/` + this.id,
         {
           method: "POST",
           body: dataForm,
@@ -104,7 +104,7 @@ export default {
       valores = this.jms.filter((filtrar) => {
 
 
-        return filtrar != "http://127.0.0.1:3333/uploads/undefined";
+        return filtrar != "https://api.ark-tracos.com/uploads/undefined";
       })
 
       console.log(valores)
@@ -130,7 +130,7 @@ export default {
 
     // this.id_prod = 60;    this.listar(); 
 
-    this.img = 'http://127.0.0.1:3333/uploads/'
+    this.img = 'https://api.ark-tracos.com/uploads/'
     this.id = window.localStorage.getItem('id');
 
     //   this.dados = (await this.listar2()).dados
@@ -188,7 +188,6 @@ export default {
         }
         return apresentar[status]
     },
-
 
     este_estado(status) {
         let apresentar = {

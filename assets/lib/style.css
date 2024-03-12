@@ -28,6 +28,8 @@
 /********* General CSS *********/
 /*******************************/
 
+ 
+
 .capaXLinicio {
     /* Background pattern from Toptal Subtle Patterns */
        height: 500px;
@@ -337,8 +339,6 @@ background-position: right, left;
         font-size: 15px;
         text-transform: uppercase;
     }
-
-     
 }
 
 @media (max-width: 991.98px) {

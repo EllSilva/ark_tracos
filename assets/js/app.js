@@ -27,7 +27,6 @@ Vue.component('p-home', page_home)
 
 import page_servicos from './view/servicos/home.js'
 Vue.component('p-servicos', page_servicos)
-
 import page_contrucao from './view/servicos/contrucao.js'
 Vue.component('p-contrucao', page_contrucao)
 import page_reabilitacao from './view/servicos/reabilitacao.js'
@@ -42,12 +41,13 @@ Vue.component('p-sobre', page_sobre)
 
 import page_galeria from './view/galeria/home.js'
 Vue.component('p-galeria', page_galeria)
-
 import page_detalhe from './view/galeria/detalhe.js'
 Vue.component('p-detalhe', page_detalhe)
 
 import page_blogs from './view/blogs/home.js'
 Vue.component('p-blogs', page_blogs)
+import page_detalheblogs from './view/blogs/detalhe.js'
+Vue.component('p-detalheblogs', page_detalheblogs)
 
 import page_contato from './view/contato/home.js'
 Vue.component('p-contato', page_contato)
@@ -70,6 +70,7 @@ const routes = [
     { path: '/detalhe', component: { template: '<p-detalhe></p-detalhe>' } },
 
     { path: '/blog', component: { template: '<p-blogs></p-blogs>' } },
+    { path: '/blog/detalhe', component: { template: '<p-detalheblogs></p-detalheblogs>' } },
 
     { path: '/contato', component: { template: '<p-contato></p-contato>' } }
 ]

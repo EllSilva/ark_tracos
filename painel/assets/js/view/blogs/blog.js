@@ -30,7 +30,7 @@ export default {
 
     let dados = (await this.listar()).data;
 
-    this.img = 'http://127.0.0.1:3333/uploads/'
+    this.img = 'https://api.ark-tracos.com/uploads/'
 
     console.log(this.img)
     this.produtos = (await this.listar()).data;

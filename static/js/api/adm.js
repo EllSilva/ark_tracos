@@ -26,12 +26,25 @@ export default {
     async lista_blog() {
         return await http.get('/publicidades')
     }, 
+    async lista_blog_um(id) {
+        return await http.get('/publicidades/'+id)
+    }, 
+
+    
 
     async listar_blog( titulo, descricao, imagem) {
         return await http.get('/publicidades', {
              titulo, descricao, imagem
         })
     },
+
+
+    async cometar_public(id, nome, email, texto) {
+        return await http.post('/publicidades/'+id+'/comentarios', {
+           nome, email, texto
+        })
+    },
+ 
 
     async cadastra_projeto(
         titulo, categoria, link) {
@@ -68,11 +81,6 @@ export default {
         })
     },
 
-    async atualizar(token, nome, cpf, telefone, data_nascimento) {
-        return await http.post('/atualizar-adm', {
-            token, nome, cpf, telefone, data_nascimento
-        })
-    },
 
     async atualizarFinaliza(cpf_cnpj, data_nascimento, tipo, token) {
         return await http.post('/completar-profile', {

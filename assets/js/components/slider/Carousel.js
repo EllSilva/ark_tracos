@@ -1,5 +1,5 @@
 import get_template from './../get_template.js'
-import CarouselItem from './carouselitem.js'
+import CarouselItem from './Carouselitem.js'
 import CarouselControls from './CarouselControls.js'
 import CarouselIndicators from './CarouselIndicators.js'
 
